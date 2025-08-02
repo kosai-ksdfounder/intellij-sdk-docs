@@ -498,24 +498,30 @@ Examples
 
 <tldr>
 
-**Reference:** [Declaring Incompatibility with Module](plugin_compatibility.md#declaring-incompatibility-with-module)
+**Reference:** [Declaring Incompatibility with Plugin](plugin_compatibility.md#declaring-incompatibility-with-module)
 
 </tldr>
 
-Declares incompatibility with a provided module.
+The [ID](#idea-plugin__id) or [alias](#idea-plugin__module) of the plugin the current plugin is incompatible 
+with. The plugin is not loaded if the incompatible plugin is installed in the current IDE.
 
 {type="narrow"}
 Required
 : no; ignored in an [additional config file](#additional-plugin-configuration-files)
 
 
-Example
+Examples
 :
-  ```xml
-  <incompatible-with>
-    com.intellij.modules.appcode.ide
-  </incompatible-with>
-  ```
+- ```xml
+<incompatible-with>
+  com.intellij.modules.appcode.ide
+</incompatible-with>
+```
+- ```xml
+<incompatible-with>
+  com.intellij.java
+</incompatible-with>
+```
 
 ### `extensions`
 {#idea-plugin__extensions}
